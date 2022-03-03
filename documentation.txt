@@ -1,0 +1,39 @@
+1. I started by creating html file for the frontend that 
+will accept:
+i. A start date in the format YYYY-MM-DD
+ii. An end date in the format YYYY-MM-DD
+iii. A Boolean that returns only the Hazardous objects
+
+This will also hold my script that will make a request to the API.
+
+
+2. I used AWS SAM to create Lambda and API gateway.
+- using 'sam init'
+-select Nodejs as preferred language
+-
+
+Problem encountered
+1. Upgrading nodejs version on windows(i.e. 8.5.2)
+- there was an error when I tried to create react app using the old version of npm(8.3.1)\
+
+Solution
+a)I firstly installed the new version of nodejs from https://nodejs.org/en/download/
+b) npm config set registry http://registry.npmjs.org
+c)  npm i -g npm-upgrade
+
+2. research on date picker module: https://retool.com/blog/how-to-use-react-datepicker-to-build-better-internal-apps/
+
+3. Cors issues
+I was trying to make an API call through Axios in my React Application. However, I am getting this CORS issue on my browser.
+
+Solution
+I solved it by creating a proxy server(to serve as middleware between client and the API Website)
+a. https://dev.to/will_yama/how-to-overcome-cors-errors-2nh9
+b. https://www.stackhawk.com/blog/react-cors-guide-what-it-is-and-how-to-enable-it/
+
+
+4. require('node-fetch') gives { code: 'ERR_REQUIRE_ESM' }
+Solved by 
+a. Uninstall the current version of node-fetch with npm uninstall node-fetch
+b. Install the second version: npm install node-fetch@2
+

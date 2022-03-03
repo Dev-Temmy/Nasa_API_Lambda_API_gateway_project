@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "trend-micro-challenge"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-rfy966w93i5o"
+s3_prefix = "trend-micro-challenge"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
